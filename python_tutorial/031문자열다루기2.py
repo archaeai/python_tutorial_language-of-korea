@@ -1,4 +1,8 @@
+# 딱히 잘 안쓰니까 이런게 있구나 참고해 보자.
 # slice는 009를 참고하자
+from ast import JoinedStr
+
+
 str_a='abcdefghigk' 
 #str_a=[1,2,3,4,5,6] 리스트로도  실행해보자
 #홀수번째만 뽑아보자
@@ -65,9 +69,28 @@ print('a의 개수',word_count)
 word_find=str_test3.find('a')#최초로 나타내는 위치
 word_find10=str_test3.find('a',10)#인덱스 10이후부터 a위치
 print('최초 a의 위치',word_find) 
-print('두번째 a의 위치',word_find10)
+print('10행이후 a의 위치',word_find10)
 
 """***** 문자열을 특정문자로 분리하기 split"""
 url='https:www.test.python/pandas/folium/kevin'
 ret1=url.split('/') #split()안이 공백이라면 공백기준으로 split한다.
-print(ret1)
+print('나눈 문자열',ret1)
+""" 문자열 결합하기 bond"""
+bond='/'
+bond_text=bond.join(ret1)
+print('다시 합친 문자열',bond_text)
+""" 특정 문자를 다른 문자로 바꾸기 replace"""
+replace_text=bond_text.replace('kevin','kevin_smith')
+# kevin을 kevin smith로 변경
+print('kevin을 kevin_smith로 변경 ',replace_text)
+
+"""문자열 정렬 sorted, join"""
+
+text_text='bcad'
+ret1=sorted(text_text)
+ret2=sorted(text_text,reverse=True)
+print('내림차순:오름차순',ret1,':',ret2)
+# 이렇게 낱게로 되있는 것을 join으로 연결하면 다시 문자가 됨
+ret1=''.join(ret1) # ''.join을 하면 리스트안 요소가 연속으로 붙는다
+print('join',ret1)
+

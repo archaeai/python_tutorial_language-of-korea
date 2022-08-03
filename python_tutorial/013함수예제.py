@@ -1,4 +1,4 @@
-def str_add(t1,t2='hi'):
+def str_add(t1,t2='hi'):#t2는 디폴트 값이 있어서 t1만 값을 줘도 작동
     print(t1+t2)
 
 str_add('줄리엣')
